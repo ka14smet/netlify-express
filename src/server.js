@@ -40,11 +40,11 @@ connection.once('open', function() {
 })
 
 //app.use('/users',userRoutes);
-app.use('/.netlify/functions/server', userRoutes);
+app.use('/.netlify/functions/server/users', userRoutes);
 //router.get('/',(req,res)=>{
 //res.send('Ka14');
 //});
-userRoutes.route('/users').get((req,res)=>{
+userRoutes.route('/').get((req,res)=>{
     console.log("start user mongo inside")
     User.find((err, users)=>{
         if(err){
