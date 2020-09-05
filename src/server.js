@@ -56,6 +56,13 @@ userRoutes.route('/').get((req,res)=>{
     });
 });
 
+userRoutes.route('/test').get((req,res)=>{
+    console.log("start user mongo inside")
+    //router.get('/',(req,res)=>{
+res.send('Ka14');
+    
+});
+
 userRoutes.route('/:id').get(function(req,res){
     let id= req.params.id;
     User.findById(id, function(err,user){
