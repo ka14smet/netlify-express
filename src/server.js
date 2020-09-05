@@ -6,7 +6,7 @@ const router = express.Router();
 
 //routes
 router.get('/',(req,res)=>{
-res.send('we are on home');
+res.send('Ka14');
 });
 
 //routes
